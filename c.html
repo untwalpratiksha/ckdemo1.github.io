@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    /> -->
+    <link rel="stylesheet" href="bootstrap/bootstrap1.min.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Bootstrap 5 carousel</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".itemTitle").toggleClass("isActive");
+        $("#traditionCarousel .itemTitle").hover(function () {
+          $(this).toggleClass("isnotActive");
+          $(this).attr('hover','yes');
+          $('.itemTitle').each(function(){
+            if($(this).attr('hover')=='yes'){     
+              $(this).toggleClass("isnotActive");
+            }
+            else{
+               $(this).toggleClass("isnotActive");
+            }
+          });
+        });
+        $("#vadapav").hover(function () {
+          $('#vadapav #cItemImg1').toggleClass("animate__fadeInLeft");
+          $('#vadapav #it0').toggleClass("animate__bounceIn");
+          $('#vadapav #it1').toggleClass("animate__fadeInDown");
+          $('#vadapav #it2').toggleClass("animate__fadeInRight");
+          $('#vadapav #it3').toggleClass("animate__fadeInLeft");
+          $('#vadapav #it4').toggleClass("animate__fadeInLeft");
+          $('#vadapav #it5').toggleClass("animate__fadeInRight");
+          $('#vadapav #it6').toggleClass("animate__fadeInRight");
+});
+});
+    
+    </script>
+    <style>
+      .isActive {
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+      }
+      .isnotActive {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+      }
+    </style>
+    <script src="js/sliderHover.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- <div class="row my-auto">
+        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/31f?text=1"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/e66?text=2"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/7d2?text=3"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400?text=4"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 4</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/aba?text=5"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 5</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/fc0?text=6"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">Slide 6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div class="row my-auto">
+        <div
+          id="recipeCarousel1"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/31f?text=1"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">2 Slide 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/e66?text=2"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">2 Slide 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/7d2?text=3"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">2 Slide 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="https://via.placeholder.com/500x400/e66?text=2"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="card-img-overlay">2 Slide 2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div> -->
+       <div data-aos="fade-right" class="row">
+        <div id="traditionCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem1">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="vadapav" class="itemTitle">
+                  <img 
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/vadapav/VADAPAV.png"
+                    alt="VADAPAV"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Traditional/vadapav/CHHOTU.png"
+                    alt="CHHOTU"
+                  />
+                  <img
+                    id="it1" class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/vadapav/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/vadapav/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/vadapav/LIP-SMAKING.png"
+                    alt="LIP-SMACKING"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/vadapav/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/vadapav/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/vadapav/SPICY.png"
+                    alt="SPICY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="chai" class="itemTitle">
+                  <video playsinline autoplay muted loop id="bgvid">
+                    <source
+                      src="img/Traditional/Tea/Chai.mp4"
+                      type="video/mp4"
+                    />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="sabuVada" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Traditional/SABU-VADA/SABU-VADA.png"
+                    alt="SABU-VADA"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__lightSpeedInLeft"
+                    src="img/Traditional/SABU-VADA/SABU-VADA-NAME.png"
+                    alt="SABU-VADA"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/SABU-VADA/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/SABU-VADA/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/SABU-VADA/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/SABU-VADA/SCRUMMY.png"
+                    alt="SCRUMMY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/SABU-VADA/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/SABU-VADA/DELECIOUS.png"
+                    alt="DELECIOUS"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div  class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="coconutPattice" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Traditional/COCONUT PATTICE/COCONUT PATTICE.png"
+                    alt="COCONUT PATTICE"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInDown"
+                    src="img/Traditional/COCONUT PATTICE/COCONUT PATTICE-NAME.png"
+                    alt="COCONUT PATTICE"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/COCONUT PATTICE/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/COCONUT PATTICE/SALACIOUS.png"
+                    alt="SALACIOUS"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/COCONUT PATTICE/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/COCONUT PATTICE/DELECIOUS.png"
+                    alt="DELECIOUS"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/COCONUT PATTICE/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/COCONUT PATTICE/TASTY.png"
+                    alt="TASTY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="Bhel" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Traditional/BHEL/BHEL.png"
+                    alt="BHEL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__flipInX"
+                    src="img/Traditional/BHEL/BHEL-NAME.png"
+                    alt="BHEL-NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/BHEL/CHAT-PATI.png"
+                    alt="CHAT-PATI"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/BHEL/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/BHEL/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/BHEL/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/BHEL/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/BHEL/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div  id="basicCornPattice" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CORN PATTICE/MENU.png"
+                    alt="CORN PATTICE"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__lightSpeedInLeft"
+                    src="img/Traditional/CORN PATTICE/CORN PATTICE.png"
+                    alt="CORN PATTICE"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/CORN PATTICE/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/CORN PATTICE/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CORN PATTICE/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CORN PATTICE/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/CORN PATTICE/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem2" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div  id="alooParatha" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInDown"
+                    src="img/Traditional/alooParatha/ALOO PARATHA.png"
+                    alt="ALOO PARATHA"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__lightSpeedInLeft"
+                    src="img/Traditional/alooParatha/PET BHAR KE.png"
+                    alt="PET BHAR KE"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="ChanaJoor"  class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Traditional/CHANA JORR/CHANA JORR.png"
+                    alt="CHANA JORR"
+                  />
+                  <img
+                    id="cItemImg2"
+                    class="animate__animated animate__fadeInUp"
+                    data-aos="fade-right"
+                    src="img/Traditional/CHANA JORR/LIMBU.png"
+                    alt="LIMBU"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Traditional/CHANA JORR/CHANA JORR-NAME.png"
+                    alt="CHANA JORR"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Traditional/CHANA JORR/CHAT-PATAA.png"
+                    alt="CHAT-PATAA"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/CHANA JORR/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CHANA JORR/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CHANA JORR/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/CHANA JORR/TANGY.png"
+                    alt="TANGY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Traditional/CHANA JORR/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Traditional/CHANA JORR/SPICY.png"
+                    alt="SPICY"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#traditionCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#traditionCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="menuCategory">
+        <h1>Trending</h1>
+      </div>
+      <div data-aos="fade-right" class="row">
+        <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem2" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="rMotu" class="itemTitle">
+                  <img data-aos="fade-up"
+                    id="it0"
+                    class="animate__animated animate__flash"
+                    src="img/Trending/R.MOTU/ROCKING.png"
+                    alt="ROCKING MOTU"
+                  />
+                  <img data-aos="zoom-in"
+                    id="it1"
+                    class="animate__animated animate__zoomIn"
+                    src="img/Trending/R.MOTU/MOTU.png"
+                    alt="MOTU"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="chaiButter" class="itemTitle">
+                  <video playsinline autoplay muted loop id="bgvid">
+                    <source
+                      src="img/Trending/ChaiButter paratha/Website Chai-butter paratha.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="cornPattice" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/CORN PATTICE/MENU.png"
+                    alt="MENU"
+                  />
+                  <img 
+                    id="it0"
+                    class="animate__animated animate__backInDown"
+                    src="img/Trending/CORN PATTICE/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/CORN PATTICE/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CORN PATTICE/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CORN PATTICE/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CORN PATTICE/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CORN PATTICE/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div  class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="butterDabeli" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/DABELI/DABELI MENU.png"
+                    alt="DABELI"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__lightSpeedInLeft"
+                    src="img/Trending/DABELI/BUTTER.png"
+                    alt="BUTTER"
+                  />
+                  <img
+                    id="it01"
+                    class="animate__animated animate__lightSpeedInRight"
+                    src="img/Trending/DABELI/DABELI.png"
+                    alt="DABELI"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/DABELI/SCRUMPTIONS.png"
+                    alt="SCRUMPTIONS"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/DABELI/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/DABELI/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/DABELI/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/DABELI/TEMPTING.png"
+                    alt="TEMPTING"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/DABELI/SPICY.png"
+                    alt="SPICY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="manturianGravy" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/MANCHURIAN GRAVY/MENU.png"
+                    alt="MENU"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/MANCHURIAN GRAVY/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/MANCHURIAN GRAVY/CHAT-PATTA.png"
+                    alt="CHAT-PATTA"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/MANCHURIAN GRAVY/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/MANCHURIAN GRAVY/JUCY.png"
+                    alt="JUCY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/MANCHURIAN GRAVY/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/MANCHURIAN GRAVY/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="pizzaParatha" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/PIZZA PARATHA/PIZZA.png"
+                    alt="PIZZA"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Trending/PIZZA PARATHA/PIZZA PARATHA.png"
+                    alt="PIZZA PARATHA"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/PIZZA PARATHA/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/PIZZA PARATHA/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/PIZZA PARATHA/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/PIZZA PARATHA/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/PIZZA PARATHA/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="walkyTalky" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/WALKY-TALKY/WALKY-TALKY.png"
+                    alt="WALKY-TALKY"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/WALKY-TALKY/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/WALKY-TALKY/DELECIOUS.png"
+                    alt="DELECIOUS"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/WALKY-TALKY/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/WALKY-TALKY/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/WALKY-TALKY/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/WALKY-TALKY/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/WALKY-TALKY/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="mayonnaiseChhotu" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/MAYONNAISE CHHOTU/MENU.png"
+                    alt="MAYONNAISE CHHOTU"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Trending/MAYONNAISE CHHOTU/NAME.png"
+                    alt="MAYONNAISE CHHOTU"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/MAYONNAISE CHHOTU/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/MAYONNAISE CHHOTU/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/MAYONNAISE CHHOTU/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/MAYONNAISE CHHOTU/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/MAYONNAISE CHHOTU/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="cheeseCornPattice" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/CHEESE CORN PATTICE/CHEESE CORN PATTICE.png"
+                    alt="CHEESE CORN PATTICE"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Trending/CHEESE CORN PATTICE/NAME.png"
+                    alt="CHEESE CORN PATTICE"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/CHEESE CORN PATTICE/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CHEESE CORN PATTICE/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CHEESE CORN PATTICE/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CHEESE CORN PATTICE/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CHEESE CORN PATTICE/CHEESSEE.png"
+                    alt="CHEESSEE"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4 col-lg-3">
+                <div id="cheeseChhotu" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Trending/CHEESE CHHOTU/MENU.png"
+                    alt="CHEESE CHHOTU"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Trending/CHEESE CHHOTU/NAME.png"
+                    alt="CHEESE CHHOTU"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Trending/CHEESE CHHOTU/CHEESEE.png"
+                    alt="CHEESEE"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CHEESE CHHOTU/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CHEESE CHHOTU/DELESCIOUS.png"
+                    alt="DELESCIOUS"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CHEESE CHHOTU/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CHEESE CHHOTU/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Trending/CHEESE CHHOTU/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Trending/CHEESE CHHOTU/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#trendingCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#trendingCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="menuCategory">
+        <h1>Wraps & Roll</h1>
+      </div>
+      <div data-aos="fade-right" class="row">
+        <div id="wrapNrollCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="manturianRoll" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/ROLL.png"
+                    alt="ROLL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/wrapsNroll/MANCHURIAN ROL/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/wrapsNroll/MANCHURIAN ROL/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/DELECTABLE.png"
+                    alt="DELECTABLE"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/LUSACIOUS.png"
+                    alt="LUSACIOUS"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/JUICY.png"
+                    alt="JUICY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="motuRoll" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MOTU ROLL/M R ROLL.png"
+                    alt="ROLL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/wrapsNroll/MOTU ROLL/MOTU ROLL.png"
+                    alt="MOTU ROLL"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/wrapsNroll/MOTU ROLL/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MOTU ROLL/DELECIOUS.png"
+                    alt="DELECIOUS"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MOTU ROLL/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MOTU ROLL/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MOTU ROLL/LUSCIOUS.png"
+                    alt="LUSCIOUS"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MOTU ROLL/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="waklyTaklyRoll" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/MENU.png"
+                    alt="ROLL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/LIP-SMAKING.png"
+                    alt="LIP-SMAKING"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/SCRUMMY.png"
+                    alt="SCRUMMY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/WALKY-TALKY ROLL/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="manturianRoll" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/ROLL.png"
+                    alt="ROLL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/wrapsNroll/MANCHURIAN ROL/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/wrapsNroll/MANCHURIAN ROL/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/DELECTABLE.png"
+                    alt="DELECTABLE"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/HOT.png"
+                    alt="HOT"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/wrapsNroll/MANCHURIAN ROL/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/LUSACIOUS.png"
+                    alt="LUSACIOUS"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/wrapsNroll/MANCHURIAN ROL/JUICY.png"
+                    alt="JUICY"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#wrapNrollCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#wrapNrollCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div class="menuCategory">
+        <h1>Beverages</h1>
+      </div>
+      <div data-aos="fade-right" class="row">
+        <div id="beveragesCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem3" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="soda" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/SODA/SENSATIONAL.png"
+                    alt="SENSATIONAL"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/SODA/8.png"
+                    alt="soda"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeIn"
+                    src="img/Beverages/SODA/DYNAMIC.png"
+                    alt="DYNAMIC"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeIn"
+                    src="img/Beverages/SODA/STRONG.png"
+                    alt="STRONG"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/SODA/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__flipInX"
+                    src="img/Beverages/SODA/SODA.png"
+                    alt="SODA"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="coldCoffee" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Beverages/COLD COFFEE/NAME.png"
+                    alt="COFFEE"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Beverages/COLD COFFEE/MILKY.png"
+                    alt="MILKY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/COLD COFFEE/CREMY.png"
+                    alt="CREMY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/COLD COFFEE/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/COLD COFFEE/THICK.png"
+                    alt="THICK"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/COLD COFFEE/TASTY.png"
+                    alt="TASTY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="mangooLassie" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Beverages/MANGO LASSIE/LASSIE.png"
+                    alt="LASSIE"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceIn"
+                    src="img/Beverages/MANGO LASSIE/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/Beverages/MANGO LASSIE/CREMY.png"
+                    alt="CREMY"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/MANGO LASSIE/THICK.png"
+                    alt="THICK"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/MANGO LASSIE/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/MANGO LASSIE/MILKY.png"
+                    alt="MILKY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/MANGO LASSIE/FLAVORSOME.png"
+                    alt="FLAVORSOME"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/MANGO LASSIE/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="classicLassie" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/CLASSIC LASSIE/LASSIE.png"
+                    alt="LASSIE"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/C.png"
+                    alt="C"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/L.png"
+                    alt="L"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/A.png"
+                    alt="A"
+                  />
+                  <div id="it01" class="whiteLine"></div>
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/S.png"
+                    alt="S"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/S.png"
+                    alt="S"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/I.png"
+                    alt="I"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/C BLACK.png"
+                    alt="C"
+                  />
+                  <div id="it02" class="blackLine"></div>
+                  <img
+                    id="it7"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/L.png"
+                    alt="L"
+                  />
+                  <img
+                    id="it8"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/A.png"
+                    alt="A"
+                  />
+                  <img
+                    id="it9"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/I.png"
+                    alt="I"
+                  />
+                  <img
+                    id="it10"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/Beverages/CLASSIC LASSIE/E.png"
+                    alt="E"
+                  />
+                  <img
+                    id="it11"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it12"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/CLASSIC LASSIE/CREAMY.png"
+                    alt="CREAMY"
+                  />
+                  <img
+                    id="it13"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/CLASSIC LASSIE/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it14"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/THICK.png"
+                    alt="THICK"
+                  />
+                  <img
+                    id="it15"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Beverages/CLASSIC LASSIE/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it16"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Beverages/CLASSIC LASSIE/MALAIDAR.png"
+                    alt="MALAIDAR"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#beveragesCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#beveragesCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div class="menuCategory">
+        <h1>Snacks-Time</h1>
+      </div>
+      <div data-aos="fade-right" class="row">
+        <div id="snacksTimeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div  id="bhdang" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/BHDANG/BHADANG PACK.png"
+                    alt="BHADANG PACK"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInUp"
+                    src="img/Snacks/BHDANG/RED-STICKER.png"
+                    alt="STICKER"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Snacks/BHDANG/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHDANG/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/BHDANG/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/BHDANG/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHDANG/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHDANG/CHAT-PATTA.png"
+                    alt="CHAT-PATTA"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="bhelBhatta" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/BHEL BHATTA/traditional packet mockup 3d standy pouch_bhel bhatta.png"
+                    alt="BHEL BHATTA"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInUp"
+                    src="img/Snacks/BHEL BHATTA/BHEL BHATTA- STICKER.png"
+                    alt="BHEL BHATTA"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Snacks/BHEL BHATTA/CHAT-PATTA.png"
+                    alt="CHAT-PATTA"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHEL BHATTA/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/BHEL BHATTA/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHEL BHATTA/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/BHEL BHATTA/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="farsan" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/FARSAN/traditional packet mockup 3d standy pouch_Farsan.png"
+                    alt="FARSAN"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInUp"
+                    src="img/Snacks/FARSAN/FARSAN-STICKER.png"
+                    alt="FARSAN-STICKER"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Snacks/FARSAN/DELECTABLE.png"
+                    alt="DELECTABLE"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/FARSAN/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/FARSAN/APPETIZING.png"
+                    alt="APPETIZING"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/FARSAN/TASTY.png"
+                    alt="TASTY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/FARSAN/DELECIOUS.png"
+                    alt="DELECIOUS"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="oliBhel" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/OLI BHEL/Products_Mockup_1.png"
+                    alt="OLI BHEL"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__zoomInUp"
+                    src="img/Snacks/OLI BHEL/OLIBHEL-STICKER.png"
+                    alt="OLI BHEL"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/Snacks/OLI BHEL/KHATTI-MITTHI.png"
+                    alt="KHATTI-MITTHI"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/OLI BHEL/MOUTHWATERING.png"
+                    alt="MOUTHWATERING"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/OLI BHEL/JUICY.png"
+                    alt="JUICY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/Snacks/OLI BHEL/CRISPY.png"
+                    alt="CRISPY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/OLI BHEL/SPICY.png"
+                    alt="SPICY"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/Snacks/OLI BHEL/CHAT-PATTI.png"
+                    alt="CHAT-PATTI"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#snacksTimeCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#snacksTimeCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div class="menuCategory">
+        <h1>Dessert</h1>
+      </div>
+      <div data-aos="fade-right" class="row">
+        <div id="dessertCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="familyPack" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/familyPack/MENU.png"
+                    alt="DESSERT_FAMILY"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__fadeInDown"
+                    src="img/DESSERT/familyPack/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/familyPack/MILK.png"
+                    alt="MILK"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/familyPack/CRAFTED.png"
+                    alt="CRAFTED"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="kulfi" class="itemTitle">
+                  <img
+                    id="cItemImg1"
+                    class="animate__animated animate__fadeInUp"
+                    src="img/DESSERT/KULFI/MENU.png"
+                    alt="MENU"
+                  />
+                  <img
+                    id="it0"
+                    class="animate__animated animate__flash"
+                    src="img/DESSERT/KULFI/CHHOTU.png"
+                    alt="CHHOTU"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/KULFI/KULFIWALA.png"
+                    alt="KULFIWALA"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/KULFI/SUBLINE.png"
+                    alt="KULFI"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/KULFI/MILKY.png"
+                    alt="MILKY"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/KULFI/CREAMY.png"
+                    alt="CREAMY"
+                  />
+                  <img
+                    id="it5"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/KULFI/MALADAR.png"
+                    alt="MALADAR"
+                  />
+                  <img
+                    id="it6"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/KULFI/THICK.png"
+                    alt="THICK"
+                  />
+                  <img
+                    id="it7"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/KULFI/YUMMY.png"
+                    alt="YUMMY"
+                  />
+                  <img
+                    id="it8"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/KULFI/TASTY.png"
+                    alt="TASTY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="perfectBar" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/PERFECT BAR/BUTTER SCOTH CONE.png"
+                    alt="BUTTER SCOTH CONE"
+                  /><img
+                    id="cItemImg1"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/PERFECT BAR/CUP.png"
+                    alt="CUP"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/PERFECT BAR/PERFECT BAR.png"
+                    alt="PERFECT BAR"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/PERFECT BAR/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/PERFECT BAR/MILK.png"
+                    alt="MILK"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/PERFECT BAR/CRAFTED.png"
+                    alt="CRAFTED"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item cItem1" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="smartBar" class="itemTitle">
+                  <img
+                    id="it0"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/SMART BAR/SMART CONE.png"
+                    alt="SMART CONE"
+                  /><img
+                    id="cItemImg1"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/SMART BAR/STRAWBERRY-CUP.png"
+                    alt="CUP"
+                  />
+                  <img
+                    id="it1"
+                    class="animate__animated animate__bounceInDown"
+                    src="img/DESSERT/SMART BAR/SMART BAR.png"
+                    alt="SMART BAR"
+                  />
+                  <img
+                    id="it2"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/SMART BAR/NAME.png"
+                    alt="NAME"
+                  />
+                  <img
+                    id="it3"
+                    class="animate__animated animate__fadeInRight"
+                    src="img/DESSERT/SMART BAR/MILK.png"
+                    alt="MILK"
+                  />
+                  <img
+                    id="it4"
+                    class="animate__animated animate__fadeInLeft"
+                    src="img/DESSERT/SMART BAR/CRAFTED.png"
+                    alt="CRAFTED"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#dessertCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#dessertCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <div></div>
+
+      <div data-aos="fade-right" class="row">
+        <div id="infrastructureCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item  active" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="infrastructureImg2" class="itemTitle">
+                  <h2 id="iTitle2">Automated Manufacturing</h2>
+                  <div class="line" id="line2"></div>
+                  <p>
+                    We have 3 state of the art manufacturing plant where we produce
+                    quality products with the help of modern technology and
+                    traditional Kolhapur regional recipe and ingredients.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="infrastructureImg3" class="itemTitle">
+                  <h2 id="iTitle3">Freezing Technology</h2>
+                  <div class="line" id="line4"></div>
+                  <p>
+                    Manufacturing facilities are equipped with blast freezing and
+                    rapid freezing technology this ensures color, texture flavor and
+                    nutrients are locked in to product. This state of art technology
+                    enable our customer to enjoy taste of freshly prepared product at
+                    outlet.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+              <div class="col-sm-6 col-12 col-md-4  col-lg-3">
+                <div id="infrastructureImg4" class="itemTitle">
+                  <h2 id="iTitle4">Refrigerated Transport</h2>
+                  <div class="line" id="line3"></div>
+                  <p>
+                    We own fleet of refrigerated transport vehicles to make sure
+                    efficient delivery of products without losing its natural
+                    qualities and freshness.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="infrastructureImg1" class="itemTitle">
+                  <h2 id="iTitle1">Laboratory</h2>
+                  <div class="line" id="line1"></div>
+                  <p>
+                    Our in house food laboratory dedicated to providing the best food
+                    analysis at the highest level of efficiency. At the forefront of
+                    analysis we bring expertise to the table for making all
+                    microbiological, chemical and sensor taste by using advanced
+                    technology in the industry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+              <div class="col-sm-6 col-12  col-md-4  col-lg-3">
+                <div id="infrastructureImg5" class="itemTitle">
+                  <h2 id="iTitle5">Contamination detection</h2>
+                  <div class="line" id="line5"></div>
+                  <p>
+                    This system is installed at automated production line, to check
+                    any contamination of food products such as stone, metal, glass and
+                    high density plastic and rubber etc. This system detects
+                    contamination that cannot be detected by cameras, naked eye or
+                    metal detectors.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#infrastructureCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#infrastructureCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>
