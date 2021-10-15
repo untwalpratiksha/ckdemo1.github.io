@@ -43,7 +43,16 @@
     />
     <link rel="stylesheet" href="a.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-     <script>
+    <script>
+      function scrollWin() {
+        window.scrollBy(0, 200);
+        // document.getElementsByClassName()
+      }
+      function scrollWin1() {
+        window.scrollTo(0, 0);
+      }
+    </script>    
+    <script>
       function startTimer(duration, display) {
         var timer = duration,
           minutes,
@@ -2165,7 +2174,9 @@
         </div>
       </div>  
       <!-- Dessert Slider End -->
-       
+      <div class="arrow arrowDown" onclick="scrollWin();">
+        <span class="material-icons">arrow_circle_down</span>
+      </div>
       <div class="section mainFooter container-fluid" id="section7">
         <div class="row footer1 d-sm-none d-md-block d-lg-block">
           <div class="footerDetail col-md-6">
@@ -2353,6 +2364,10 @@
             loading="lazy"
           ></iframe>
         </div> 
+        <div class="footerLink">
+          <a href="disclaimer.html">Disclaimer</a> | 
+          <a href="privacyPolicy.html"> Privacy Policy</a> 
+        </div>
       </div>
     </div>
 

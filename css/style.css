@@ -11,7 +11,9 @@
 #fullpage {
   overflow-y: hidden;
 }
-
+img {
+  pointer-events: none;
+}
 #largeDevice {
   padding: 0;
   margin: 0;
@@ -1007,6 +1009,16 @@ main {
   display: flex;
   flex-direction: column;
 }
+.footerLink {
+  background: rgb(37, 60, 76, 0.5);
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+.footerLink a {
+  text-decoration: none;
+  color: #fff;
+}
 .footer .footerLabel {
   order: 1;
 }
@@ -1624,7 +1636,6 @@ iframe {
   font-size: 35px;
   /* color: #fff; */
   font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 14px;
   font-family: "Futura Md BT", "Inter", sans-serif;
@@ -1643,6 +1654,19 @@ iframe {
 .ErgonomicTitle h2 {
   font-size: 35px;
 }
+#privacyTitle h1 {
+  text-align: center;
+  color: #62cae6;
+  font-size: 35px;
+  font-weight: bold;
+}
+.privacyContent {
+  color: #fff;
+}
+.privacyContent strong {
+  color: #e7e8b4;
+}
+
 .storeContent #outline1 {
   /* text-align: center; */
   height: 0px;
